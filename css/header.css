@@ -1,0 +1,136 @@
+header {
+	
+	position: relative;
+}
+
+.logo img {
+	width: 115px;
+	height: 32px;
+	margin-top: 15px;
+}
+
+.navbar ul {
+	list-style: none;
+	float: right;
+}
+.navbar ul li {
+	display: inline-block;
+	padding: 10px 9px;
+	position: relative;
+}
+.navbar ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 12px;
+}
+.navbar ul li a {
+	color: #fff;
+	text-decoration: none;
+	
+	position: relative;
+	line-height: 20px;
+	padding: 5px 2px 5px 2px ;
+}
+.navbar ul li a:hover {
+    border-bottom: 2px solid #fff;
+    transition: border 0.1s ease-in-out;
+}
+.number {
+    color: #fff;
+    cursor: pointer;
+}
+.active {
+	border-bottom: 2px solid #fff;
+}
+
+
+/* Important styles */
+#toggle {
+  display: block;
+  width: 28px;
+  height: 30px;
+  margin: 30px auto 10px;
+  float: right;
+}
+
+#toggle span:after,
+#toggle span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -9px;
+}
+#toggle span:after{
+  top: 9px;
+}
+#toggle span {
+  position: relative;
+  display: block;
+}
+
+#toggle span,
+#toggle span:after,
+#toggle span:before {
+  width: 100%;
+  height: 5px;
+  background-color: red;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+/* on activation */
+#toggle.on span {
+  background-color: transparent;
+}
+#toggle.on span:before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+#toggle.on span:after {
+  transform: rotate(-45deg) translate(7px, -8px);
+}
+#toggle.on + #menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+#menu {
+  position: relative;
+  color: #999;
+  width: 100%;
+  padding: 10px;
+  margin: auto;
+  font-family: sans-serif;
+  text-align: center;
+  border-radius: 4px;
+  background: white;
+  float: right;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+  
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .4s;
+}
+
+#menu ul, li, li a {
+	list-style: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+#menu li a {
+	padding: 5px;
+  color: #888;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+#menu li a:hover,
+#menu li a:focus {
+
+  background: #1ABC9C;
+  color: #fff;
+}
+}
